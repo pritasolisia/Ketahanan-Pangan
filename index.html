@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Ketahanan Pangan Nasional - Kementerian Keuangan RI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-logo">
+                <h1>Dashboard Ketahanan Pangan Nasional</h1>
+                <p class="header-subtitle">Kementerian Keuangan Republik Indonesia</p>
+            </div>
+            <div class="header-date" id="currentDate"></div>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <button class="tab-btn active" data-tab="overview">Ringkasan Eksekutif</button>
+        <button class="tab-btn" data-tab="availability">Availability</button>
+        <button class="tab-btn" data-tab="accessibility">Accessibility</button>
+        <button class="tab-btn" data-tab="affordability">Affordability</button>
+        <button class="tab-btn" data-tab="acceptability">Acceptability</button>
+        <button class="tab-btn" data-tab="fiscal">Aspek Fiskal</button>
+        <button class="tab-btn" data-tab="risks">Risiko &amp; Proyeksi</button>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar for Recommendations -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Rekomendasi Fiskal</h3>
+                <div id="fiscalRecommendations" class="recommendations-list"></div>
+            </div>
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Traffic Light Status</h3>
+                <div id="trafficLightSummary" class="traffic-summary"></div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Overview Tab -->
+            <div id="overview" class="tab-content active">
+                <div class="section-header">
+                    <h2>Ringkasan Eksekutif Ketahanan Pangan</h2>
+                </div>
+                <div id="executiveSummary" class="executive-summary"></div>
+                
+                <div class="kpi-grid" id="overviewKPIs"></div>
+                
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <h3>Tren Produksi Pangan Utama</h3>
+                        <canvas id="productionTrendChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Indeks Harga Pangan</h3>
+                        <canvas id="priceIndexChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Availability Tab -->
+            <div id="availability" class="tab-content">
+                <div class="section-header">
+                    <h2>Ketersediaan Pangan (Availability)</h2>
+                    <p class="section-desc">Produksi, cadangan, dan distribusi pangan nasional</p>
+                </div>
+                <div class="kpi-grid" id="availabilityKPIs"></div>
+                <div class="traffic-light-grid" id="availabilityTrafficLight"></div>
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <h3>Produksi Komoditas Utama</h3>
+                        <canvas id="availabilityChart1"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Cadangan Pangan Strategis</h3>
+                        <canvas id="availabilityChart2"></canvas>
+                    </div>
+                </div>
+                <div class="map-container" id="productionMap">
+                    <h3>Peta Produksi Pangan Nasional</h3>
+                    <div class="map-placeholder">Visualisasi peta produksi per provinsi</div>
+                </div>
+            </div>
+
+            <!-- Accessibility Tab -->
+            <div id="accessibility" class="tab-content">
+                <div class="section-header">
+                    <h2>Akses Pangan (Accessibility)</h2>
+                    <p class="section-desc">Infrastruktur distribusi dan akses fisik terhadap pangan</p>
+                </div>
+                <div class="kpi-grid" id="accessibilityKPIs"></div>
+                <div class="traffic-light-grid" id="accessibilityTrafficLight"></div>
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <h3>Infrastruktur Distribusi</h3>
+                        <canvas id="accessibilityChart1"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Akses Pasar Tradisional</h3>
+                        <canvas id="accessibilityChart2"></canvas>
+                    </div>
+                </div>
+                <div class="map-container" id="accessibilityMap">
+                    <h3>Heatmap Daerah Rawan Akses Pangan</h3>
+                    <div class="map-placeholder">Visualisasi akses pangan per kabupaten/kota</div>
+                </div>
+            </div>
+
+            <!-- Affordability Tab -->
+            <div id="affordability" class="tab-content">
+                <div class="section-header">
+                    <h2>Keterjangkauan Harga (Affordability)</h2>
+                    <p class="section-desc">Harga, inflasi, dan daya beli masyarakat</p>
+                </div>
+                <div class="kpi-grid" id="affordabilityKPIs"></div>
+                <div class="traffic-light-grid" id="affordabilityTrafficLight"></div>
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <h3>Inflasi Pangan</h3>
+                        <canvas id="affordabilityChart1"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Perbandingan Harga Regional</h3>
+                        <canvas id="affordabilityChart2"></canvas>
+                    </div>
+                </div>
+                <div class="map-container" id="priceMap">
+                    <h3>Peta Harga Pangan Nasional</h3>
+                    <div class="map-placeholder">Visualisasi harga pangan per provinsi</div>
+                </div>
+            </div>
+
+            <!-- Acceptability Tab -->
+            <div id="acceptability" class="tab-content">
+                <div class="section-header">
+                    <h2>Penerimaan Pangan (Acceptability)</h2>
+                    <p class="section-desc">Kualitas, keamanan, dan preferensi konsumsi pangan</p>
+                </div>
+                <div class="kpi-grid" id="acceptabilityKPIs"></div>
+                <div class="traffic-light-grid" id="acceptabilityTrafficLight"></div>
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <h3>Kualitas &amp; Keamanan Pangan</h3>
+                        <canvas id="acceptabilityChart1"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Pola Konsumsi Pangan</h3>
+                        <canvas id="acceptabilityChart2"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fiscal Policy Tab -->
+            <div id="fiscal" class="tab-content">
+                <div class="section-header">
+                    <h2>Aspek Fiskal &amp; Kebijakan</h2>
+                    <p class="section-desc">Anggaran, subsidi, dan program bantuan pangan</p>
+                </div>
+                <div class="kpi-grid" id="fiscalKPIs"></div>
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <h3>Alokasi Anggaran Ketahanan Pangan</h3>
+                        <canvas id="fiscalChart1"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Tren Subsidi Pupuk</h3>
+                        <canvas id="fiscalChart2"></canvas>
+                    </div>
+                </div>
+                <div class="table-section">
+                    <div class="table-header">
+                        <h3>Breakdown Anggaran RAPBN 2026</h3>
+                        <div class="table-controls">
+                            <input type="text" id="budgetSearch" placeholder="Cari item anggaran..." class="search-input">
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="budgetTable" class="data-table">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortBudgetTable(0)">Program <span class="sort-icon">↕</span></th>
+                                    <th onclick="sortBudgetTable(1)">Anggaran (Miliar Rp) <span class="sort-icon">↕</span></th>
+                                    <th onclick="sortBudgetTable(2)">Realisasi 2025 (%) <span class="sort-icon">↕</span></th>
+                                    <th onclick="sortBudgetTable(3)">Status <span class="sort-icon">↕</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="budgetTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risks & Projections Tab -->
+            <div id="risks" class="tab-content">
+                <div class="section-header">
+                    <h2>Risiko &amp; Proyeksi</h2>
+                    <p class="section-desc">Analisis risiko dan proyeksi ketahanan pangan</p>
+                </div>
+                <div class="kpi-grid" id="risksKPIs"></div>
+                <div class="alert-section" id="riskAlerts"></div>
+                <div class="charts-row">
+                    <div class="chart-container">
+                        <h3>Proyeksi Produksi 2026</h3>
+                        <canvas id="risksChart1"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Analisis Risiko Ketahanan Pangan</h3>
+                        <canvas id="risksChart2"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Kementerian Keuangan Republik Indonesia. Dashboard Ketahanan Pangan Nasional</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

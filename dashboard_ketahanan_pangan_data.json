@@ -1,0 +1,522 @@
+{
+  "metadata": {
+    "title": "Dashboard Ketahanan Pangan Nasional untuk Menteri Keuangan RI",
+    "last_updated": "30 Oktober 2025",
+    "framework": "4A (Availability, Accessibility, Affordability, Acceptability)",
+    "data_sources": "BPS, Kementan, Bapanas, Bulog, Kemenkeu (RAPBN 2026)"
+  },
+  "executive_summary": {
+    "highlights": [
+      {
+        "metric": "Surplus Beras 2025",
+        "value": "3,7 juta ton",
+        "status": "green",
+        "trend": "up"
+      },
+      {
+        "metric": "NTP September 2025",
+        "value": "124,36",
+        "status": "green",
+        "trend": "up",
+        "note": "Tertinggi dalam sejarah"
+      },
+      {
+        "metric": "Anggaran RAPBN 2026",
+        "value": "Rp 164,4 T",
+        "status": "green",
+        "trend": "up",
+        "change": "+5,9%"
+      },
+      {
+        "metric": "Stok CBP Bulog",
+        "value": "3,8 juta ton",
+        "status": "green",
+        "trend": "stable",
+        "note": "Rekor 57 tahun"
+      }
+    ]
+  },
+  "availability": {
+    "section_title": "1. KETERSEDIAAN (AVAILABILITY)",
+    "kpi_cards": [
+      {
+        "title": "Produksi Beras 2025",
+        "value": "33,19 juta ton",
+        "subtitle": "Jan-Nov 2025",
+        "change": "+12,62% vs 2024",
+        "status": "green"
+      },
+      {
+        "title": "Surplus Produksi",
+        "value": "3,7 juta ton",
+        "subtitle": "Jan-Okt 2025",
+        "status": "green"
+      },
+      {
+        "title": "Produksi Jagung",
+        "value": "9,45 juta ton",
+        "subtitle": "Jan-Jul 2025",
+        "change": "+11,08%",
+        "status": "green"
+      },
+      {
+        "title": "Impor Beras 2025",
+        "value": "0 ton",
+        "subtitle": "vs 4,5 jt ton 2024",
+        "status": "green"
+      }
+    ],
+    "produksi_komoditas": {
+      "beras": {
+        "jan_nov_2025": 33.19,
+        "target_2025": 34.0,
+        "unit": "juta ton"
+      },
+      "jagung": {
+        "jan_jul_2025": 9.45,
+        "target_2025": 23.0,
+        "unit": "juta ton"
+      },
+      "kedelai": {
+        "status": "defisit",
+        "impor": 3.0,
+        "unit": "juta ton"
+      }
+    },
+    "stok_nasional": {
+      "cbp_bulog": 3.8,
+      "stok_operasi": 1.0,
+      "cadangan_tambahan": 1.7,
+      "unit": "juta ton"
+    },
+    "produktivitas_per_ha": {
+      "padi": 5.2,
+      "jagung": 5.36,
+      "kedelai": 4.39,
+      "unit": "ton/ha"
+    },
+    "pupuk_subsidi": {
+      "alokasi_2025": 9.5,
+      "realisasi_oktober": 6.14,
+      "persentase": 64,
+      "unit": "juta ton"
+    },
+    "rapbn_2026_targets": {
+      "cetak_sawah": 250000,
+      "optimasi_lahan": 300000,
+      "alsintan_prapanen": 36958,
+      "jaringan_irigasi": 104000,
+      "bendungan": 15,
+      "unit_ha": "hektar",
+      "unit_alsintan": "unit"
+    }
+  },
+  "affordability": {
+    "section_title": "2. KETERJANGKAUAN (AFFORDABILITY)",
+    "kpi_cards": [
+      {
+        "title": "NTP September 2025",
+        "value": "124,36",
+        "subtitle": "Tertinggi dalam sejarah",
+        "change": "+0,63% mtm",
+        "status": "green"
+      },
+      {
+        "title": "Inflasi Pangan Sept",
+        "value": "5,01% yoy",
+        "subtitle": "Tertinggi 16 bulan",
+        "status": "yellow"
+      },
+      {
+        "title": "Harga Beras Rata2",
+        "value": "Rp 13.512/kg",
+        "subtitle": "Penggilingan, Okt 2025",
+        "change": "+5,83% yoy",
+        "status": "yellow"
+      },
+      {
+        "title": "Subsidi Pupuk 2026",
+        "value": "Rp 46,9 T",
+        "subtitle": "9,62 juta ton",
+        "status": "green"
+      }
+    ],
+    "harga_beras_oktober_2025": {
+      "penggilingan": 13512,
+      "grosir": 14290,
+      "eceran": 15375,
+      "unit": "Rp/kg"
+    },
+    "inflasi_pangan": {
+      "september_2025": 5.01,
+      "juli_2025": 3.75,
+      "target_bi_max": 3.5,
+      "unit": "% yoy"
+    },
+    "ntp_historis": {
+      "agustus_2025": 123.57,
+      "september_2025": 124.36,
+      "target_presiden": 110
+    },
+    "anggaran_ketahanan_pangan": {
+      "apbn_2025_pagu": 144.6,
+      "realisasi_sept": 73.6,
+      "persentase_realisasi": 50.9,
+      "rapbn_2026": 164.4,
+      "unit": "triliun rupiah"
+    },
+    "subsidi_2026": {
+      "pupuk": 46.9,
+      "volume_pupuk": 9.62,
+      "penugasan_bulog": 22.7,
+      "lumbung_pangan": 53.3,
+      "unit": "triliun rupiah"
+    }
+  },
+  "accessibility": {
+    "section_title": "3. AKSESIBILITAS (ACCESSIBILITY)",
+    "kpi_cards": [
+      {
+        "title": "Penerima BPNT 2025",
+        "value": "20 juta KPM",
+        "subtitle": "Anggaran Rp 43,6 T",
+        "change": "vs 15,2 jt di 2024",
+        "status": "green"
+      },
+      {
+        "title": "Bantuan Beras",
+        "value": "18,27 juta KPM",
+        "subtitle": "10 kg/bulan (Sept-Des)",
+        "status": "green"
+      },
+      {
+        "title": "Kab/Kota Tahan Pangan",
+        "value": "433 (84,24%)",
+        "subtitle": "81 prioritas intervensi",
+        "status": "green"
+      },
+      {
+        "title": "Cold Storage",
+        "value": "2+ juta m³",
+        "subtitle": "0,09 m³/kapita",
+        "status": "yellow"
+      }
+    ],
+    "program_bantuan": {
+      "bpnt": {
+        "penerima_kpm": 20.0,
+        "nilai_per_bulan": 200000,
+        "anggaran_total": 43.6,
+        "unit_penerima": "juta KPM",
+        "unit_anggaran": "triliun rupiah"
+      },
+      "bantuan_beras": {
+        "penerima_kpm": 18.27,
+        "volume_per_bulan": 10,
+        "periode": "Sept-Des 2025",
+        "anggaran_total": 13.9,
+        "unit_penerima": "juta keluarga",
+        "unit_volume": "kg",
+        "unit_anggaran": "triliun rupiah"
+      },
+      "pkh": {
+        "penerima_tahap_3": 9.9,
+        "unit": "juta keluarga"
+      }
+    },
+    "ketahanan_wilayah": {
+      "total_kabkota": 514,
+      "tahan_pangan": 433,
+      "prioritas_intervensi": 81,
+      "persentase_aman": 84.24
+    },
+    "infrastruktur": {
+      "cold_storage_nasional": 2.0,
+      "kapasitas_per_kapita": 0.09,
+      "target_thailand": 0.29,
+      "target_vietnam": 0.25,
+      "unit": "juta m³"
+    },
+    "rapbn_2026_daerah": {
+      "dak_ketahanan_pangan": 244.4,
+      "dana_desa": 12114.0,
+      "target_desa": 74600,
+      "jalan_usaha_tani": 103,
+      "unit_anggaran": "miliar rupiah",
+      "unit_jalan": "km"
+    }
+  },
+  "acceptability": {
+    "section_title": "4. KETERIMAAN (ACCEPTABILITY)",
+    "kpi_cards": [
+      {
+        "title": "Konsumsi Energi",
+        "value": "2.051,54 kkal",
+        "subtitle": "per kapita/hari (2024)",
+        "target": "Standar: 2.100",
+        "status": "yellow"
+      },
+      {
+        "title": "Konsumsi Protein",
+        "value": "61,70 gram",
+        "subtitle": "per kapita/hari (2024)",
+        "target": "Standar: 57",
+        "status": "green"
+      },
+      {
+        "title": "Diversifikasi Pangan",
+        "value": "Skor PPH Meningkat",
+        "subtitle": "+2,12%/tahun",
+        "status": "green"
+      },
+      {
+        "title": "Konsumsi Beras Lokal",
+        "value": "100%",
+        "subtitle": "Tanpa impor 2025",
+        "status": "green"
+      }
+    ],
+    "konsumsi_2024": {
+      "energi_kkal_per_kapita_hari": 2051.54,
+      "standar_ake": 2100,
+      "protein_gram_per_kapita_hari": 61.7,
+      "standar_akp": 57
+    },
+    "komposisi_energi_persen": {
+      "padi_padian": 39.96,
+      "makanan_minuman_jadi": 22.0,
+      "minyak_lemak": 12.84,
+      "umbi_umbian": 2.11
+    },
+    "komposisi_protein_persen": {
+      "padi_padian": 31.28,
+      "ikan": 15.2,
+      "kacang_kacangan": 8.09,
+      "daging": 7.91,
+      "telur_susu": 5.14
+    },
+    "ketergantungan_impor": {
+      "beras": "0% (surplus)",
+      "jagung": "surplus",
+      "kedelai": "~3 juta ton",
+      "gula": "5-6 juta ton",
+      "garam": "~2,5 juta ton"
+    }
+  },
+  "fiscal_policy": {
+    "section_title": "5. ASPEK FISKAL DAN KEBIJAKAN",
+    "kpi_cards": [
+      {
+        "title": "Total RAPBN 2026",
+        "value": "Rp 164,4 T",
+        "subtitle": "Naik 5,9% vs 2025",
+        "status": "green"
+      },
+      {
+        "title": "Belanja KL",
+        "value": "Rp 67,1 T",
+        "subtitle": "40,8% dari total",
+        "status": "green"
+      },
+      {
+        "title": "Investasi Bulog OIP",
+        "value": "Rp 22,7 T",
+        "subtitle": "Target 3 jt ton beras",
+        "status": "green"
+      },
+      {
+        "title": "Efisiensi BPNT",
+        "value": "Rp 2,4 jt/KPM",
+        "subtitle": "Cost per beneficiary",
+        "status": "green"
+      }
+    ],
+    "breakdown_rapbn_2026": {
+      "total": 164414.0,
+      "belanja_kl": 67056.3,
+      "belanja_non_kl": 55715.8,
+      "transfer_daerah": 12358.4,
+      "pembiayaan_investasi": 29283.5,
+      "unit": "miliar rupiah"
+    },
+    "alokasi_utama_2026": {
+      "subsidi_pupuk": 46900,
+      "lumbung_pangan_cadangan": 53300,
+      "penugasan_bulog": 22700,
+      "investasi_bulog_oip": 22734,
+      "program_kementan": 22388.7,
+      "program_kemen_pu": 11990,
+      "unit": "miliar rupiah"
+    },
+    "target_bulog_2026": {
+      "penyerapan_gabah_beras": 3.0,
+      "penyaluran_cpp": 960,
+      "unit_penyerapan": "juta ton",
+      "unit_penyaluran": "juta orang"
+    },
+    "efisiensi_fiskal": {
+      "cost_per_bpnt_kpm": 2400000,
+      "cost_per_beras_kpm": 758000,
+      "unit": "rupiah"
+    },
+    "smv_lpei": {
+      "penyaluran_2024": 7.2,
+      "akumulasi_2020_2024": 20.0,
+      "eksportir_baru_2024": 1097,
+      "desa_devisa_2024": 928,
+      "unit": "triliun rupiah"
+    }
+  },
+  "risk_projection": {
+    "section_title": "6. ANALISIS RISIKO DAN PROYEKSI",
+    "kpi_cards": [
+      {
+        "title": "Risiko Iklim",
+        "value": "Kerugian Potensial",
+        "subtitle": "Rp 77,9 T",
+        "status": "red"
+      },
+      {
+        "title": "GFSI Indonesia 2022",
+        "value": "60,2 (Rank 63/113)",
+        "subtitle": "Di bawah rata-rata global",
+        "status": "yellow"
+      },
+      {
+        "title": "Proyeksi Surplus 2025",
+        "value": "~4 juta ton",
+        "subtitle": "Potensi ekspor",
+        "status": "green"
+      },
+      {
+        "title": "Global Hunger Index",
+        "value": "Rank 70/123",
+        "subtitle": "Skor 14,6 (Moderat)",
+        "status": "yellow"
+      }
+    ],
+    "risiko_perubahan_iklim": {
+      "penurunan_produksi_potensial": "10-17,5%",
+      "kerugian_ekonomi": 77.9,
+      "wilayah_berisiko": [
+        "Jawa",
+        "Sumatra",
+        "NTT",
+        "NTB"
+      ],
+      "unit_kerugian": "triliun rupiah"
+    },
+    "proyeksi_2025": {
+      "kebutuhan_konsumsi": 27.3,
+      "produksi_total": 34.0,
+      "surplus": 4.0,
+      "unit": "juta ton beras"
+    },
+    "indeks_global": {
+      "gfsi_2022": 60.2,
+      "gfsi_rank": "63/113",
+      "gfsi_global_avg": 62.2,
+      "gfsi_asia_pacific_avg": 63.4,
+      "global_hunger_index_2025": 14.6,
+      "ghi_rank": "70/123"
+    },
+    "capaian_historis_2021_2024": {
+      "produktivitas_padi": {
+        "2021": 52.26,
+        "2024": 52.9,
+        "perubahan_persen": 1.2
+      },
+      "produktivitas_jagung": {
+        "2021": 57.62,
+        "2024": 59.4,
+        "perubahan_persen": 3.1
+      },
+      "ntp": {
+        "2021": 109.0,
+        "2024": 122.78,
+        "perubahan_poin": 13.78
+      }
+    }
+  },
+  "traffic_light_status": {
+    "komoditas": [
+      {
+        "nama": "Beras",
+        "status": "green",
+        "keterangan": "Surplus 3,7 jt ton, tanpa impor"
+      },
+      {
+        "nama": "Jagung",
+        "status": "green",
+        "keterangan": "Surplus 380 ribu ton"
+      },
+      {
+        "nama": "Kedelai",
+        "status": "red",
+        "keterangan": "Defisit, impor ~3 jt ton"
+      },
+      {
+        "nama": "Gula",
+        "status": "red",
+        "keterangan": "Impor 5-6 jt ton"
+      },
+      {
+        "nama": "Garam",
+        "status": "red",
+        "keterangan": "Impor ~2,5 jt ton"
+      },
+      {
+        "nama": "Daging Sapi",
+        "status": "yellow",
+        "keterangan": "Produksi turun, harga tinggi"
+      },
+      {
+        "nama": "Telur Ayam",
+        "status": "green",
+        "keterangan": "Produksi stabil"
+      },
+      {
+        "nama": "Cabai",
+        "status": "yellow",
+        "keterangan": "Fluktuatif"
+      },
+      {
+        "nama": "Bawang Merah",
+        "status": "yellow",
+        "keterangan": "Volatilitas tinggi"
+      }
+    ]
+  },
+  "rekomendasi_strategis": [
+    {
+      "prioritas": 1,
+      "area": "Penguatan Stok dan Distribusi",
+      "alokasi_rekomendasi": "Tambahan untuk cold storage Indonesia Timur",
+      "target": "Kapasitas 0,15 m³/kapita (+67%)"
+    },
+    {
+      "prioritas": 2,
+      "area": "Diversifikasi Pangan",
+      "alokasi_rekomendasi": "Insentif produksi kedelai",
+      "target": "Produktivitas 5 ton/ha, R&D 0,5% anggaran"
+    },
+    {
+      "prioritas": 3,
+      "area": "Adaptasi Perubahan Iklim",
+      "alokasi_rekomendasi": "Dana mitigasi Rp 5 T",
+      "target": "Asuransi 5 juta petani, benih tahan iklim"
+    },
+    {
+      "prioritas": 4,
+      "area": "Efisiensi Subsidi",
+      "alokasi_rekomendasi": "Digitalisasi distribusi pupuk",
+      "target": "Tepat sasaran, transparansi via i-Pubers"
+    },
+    {
+      "prioritas": 5,
+      "area": "Penguatan Ekspor",
+      "alokasi_rekomendasi": "Fasilitasi LPEI Rp 10 T",
+      "target": "2.000 eksportir baru, 2.500 Desa Devisa"
+    }
+  ]
+}
